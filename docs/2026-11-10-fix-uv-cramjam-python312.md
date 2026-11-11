@@ -18,3 +18,11 @@ error: Failed to download and build `cramjam==2.9.1`
 ## 修复
 
 在 `.github/workflows/test.yml` 的 `astral-sh/setup-uv@v7` 步骤中显式指定 `python-version: "3.12"`（与 `pyproject.toml` 的 `requires-python = ">=3.12"` 一致），让 uv 全部命中 `uv.lock` 中的预编译 wheel，不再从 sdist 构建。
+
+## 验证记录
+| Run | 结果 |
+|---|---|
+| 42831915838 | ✅ success |
+| 42894853795 | ✅ success |
+| 42936915075 | ✅ success |
+| 42992750289 | ✅ success |
